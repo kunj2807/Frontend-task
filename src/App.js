@@ -3,9 +3,11 @@ import './App.css';
 import Home from './components/Home';
 import About from './components/About'
 import Contact from './components/Contact'
+import Privacy from "./components/Privacy"
 import {BrowserRouter as Router,
 Route,
 Routes} from 'react-router-dom'
+import Header from './components/Header';
 
 function App() {
   const languages=[
@@ -25,8 +27,9 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home languages={languages}/>}></Route>
-          <Route path='/about' element={<About/>}></Route>
-          <Route path='/contact' element={<Contact/>}></Route>
+          <Route path='/about' element={<><Header/><About/></>}></Route>
+          <Route path='/privacy' element={<><Header/><Privacy/></>}></Route>
+          <Route path='/contact' element={<><Header/><Contact/></>}></Route>
         </Routes>
       </Router>
     </div>

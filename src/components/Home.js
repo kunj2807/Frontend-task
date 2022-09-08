@@ -28,23 +28,23 @@ function Home({ languages }) {
                 <div className="boxes flex justify-center">
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/web.bc47ec9a.svg" alt="" />
-                        <p>{all}</p>
+                        <p className='text-center'>{all}</p>
                     </div>
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/images.622fbaa2.svg" alt="" />
-                        <p>{images}</p>
+                        <p className='text-center'>{images}</p>
                     </div>
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/videos.c9144333.svg" alt="" />
-                        <p>{video}</p>
+                        <p className='text-center' >{video}</p>
                     </div>
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/news.abff090e.svg" alt="" />
-                        <p>{news}</p>
+                        <p className='text-center'>{news}</p>
                     </div>
                     <div className="bo mx-2x w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/shopping.ab2f9e3e.svg" alt="" />
-                        <p>{shopping}</p>
+                        <p className='text-center'>{shopping}</p>
                     </div>
                 </div>
                 <div className="search border-2 mt-5 md:mx-auto flex justify-around border-gray hover:shadow-md shadow-black rounded-xl w-full md:w-650">
@@ -77,11 +77,11 @@ function Home({ languages }) {
                 </div>
             </div>
             <footer className='flex flex-col md:flex-row justify-between border-t-2 border-gray p-2 mt-auto'>
-                <div className='flex m-auto  md:my-auto md:w-1/3'>
+                <div className='flex mx-auto mt-3  md:my-auto md:w-1/3'>
                     <img className='m-0 h-5 w-7 rounded-sm' src="/flag.png" alt="" />
                     <span className='ml-2'>Made in india</span>
                 </div>
-                <div className="social-media flex m-auto  w-1/3">
+                <div className="social-media flex mt-3 mx-auto  w-1/3">
                     <div className='w-10 flex justify-center  hover:bg-blue-100 rounded-md mx-1  hover:shadow-sm hover:shadow-black'>
                         <i className="fa-brands fa-facebook-f text-xl cursor-pointer text-blue-500"></i>
                     </div>
@@ -98,11 +98,11 @@ function Home({ languages }) {
                         <i className="fa-brands fa-linkedin-in text-xl cursor-pointer text-blue-500"></i>
                     </div>
                 </div>
-                <div className="links m-auto md:my-auto ">
+                <div className="links mt-3 mx-auto md:my-auto ">
                     <ul className='flex'>
-                        <li className='mx-2 text-sm'><Link to='/about'>About</Link></li>
-                        <li className='mx-2 text-sm'><Link to='/privacy'>Privacy</Link></li>
-                        <li className='mx-2 text-sm'><Link to='/contact'>Contact</Link></li>
+                        <li className='mx-2 text-sm hover:underline decoration-solid'><Link to='/about'>About</Link></li>
+                        <li className='mx-2 text-sm hover:underline decoration-solid'><Link to='/privacy'>Privacy</Link></li>
+                        <li className='mx-2 text-sm hover:underline decoration-solid'><Link to='/contact'>Contact</Link></li>
                     </ul>
                 </div>
             </footer>
