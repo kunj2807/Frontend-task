@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState} from 'react'
 import {Link} from "react-router-dom"
 import Setting from './Setting';
 
 function Home({ languages }) {
-
     const [language, setLanguage] = useState(languages[0])
     const [open,setOpen]=useState(false)
     const handleClick = (str) => {
@@ -15,7 +14,6 @@ function Home({ languages }) {
         }
     }
     const { all, video, images, news, shopping } = language
-    console.log(all, video, images, news, shopping)
     return (
         <div className='flex flex-col min-h-screen p-3'>
             <div className="header mx-auto visible lg:invisible ">
@@ -109,7 +107,7 @@ function Home({ languages }) {
                 </div>
             </footer>
 
-            <div className={`overflow-scroll max-h-full absolute top-0 right-0 ${open?'w-650':'hidden'} bg-white shadow-lg shadow-black rounded-lg`}>
+            <div className={`overflow-scroll max-h-full absolute top-0 right-0 ${open?'w-full md:w-650':'hidden'} bg-white shadow-lg shadow-black rounded-lg`}>
                 <Setting setOpen={setOpen} setLanguage={setLanguage} languages={languages} language={language}/>
             </div>
         </div>

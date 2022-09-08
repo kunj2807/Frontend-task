@@ -14,7 +14,7 @@ function Setting({setOpen,setLanguage,languages,language}) {
     }
 
     return (
-        <div className='mx-12 bg-white'>
+        <div className='mx-2 md:mx-12 bg-white'>
             <div className="head flex mt-5 ">
                 <div className='bg-gray-300 inline-block rounded-md h-10 w-10 flex justify-center ml-5  p-2'>
                     <i className="fa-solid fa-xmark text-xl cursor-pointer" ref={ref} onClick={()=>{setOpen(false)}}></i>
@@ -134,7 +134,7 @@ function Setting({setOpen,setLanguage,languages,language}) {
                         <span>Search suggestion</span>
                         <div className="flex justify-center mr-3">
                             <label className="switch">
-                                <input type="checkbox" checked />
+                                <input type="checkbox" defaultChecked />
                                 <span className="slider round"></span>
                             </label>
                         </div>
@@ -143,7 +143,7 @@ function Setting({setOpen,setLanguage,languages,language}) {
                         <span>Voice search</span>
                         <div className="flex justify-center mr-3">
                             <label className="switch">
-                                <input type="checkbox" checked/>
+                                <input type="checkbox" defaultChecked/>
                                 <span className="slider round"></span>
                             </label>
                         </div>
@@ -152,7 +152,7 @@ function Setting({setOpen,setLanguage,languages,language}) {
                         <span>Search history</span>
                         <div className="flex justify-center mr-3">
                             <label className="switch">
-                                <input type="checkbox" checked/>
+                                <input type="checkbox" defaultChecked/>
                                 <span className="slider round"></span>
                             </label>
                         </div>
