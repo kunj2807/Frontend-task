@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link} from "react-router-dom"
+import Setting from './Setting';
 
 function Home({ languages }) {
 
     const [language, setLanguage] = useState(languages[0])
-
+    const [open,setOpen]=useState(false)
     const handleClick = (str) => {
         for (let index = 0; index < languages.length; index++) {
             if (languages[index].language === str) {
@@ -103,9 +104,14 @@ function Home({ languages }) {
                         <li className='mx-2 text-sm hover:underline decoration-solid'><Link to='/about'>About</Link></li>
                         <li className='mx-2 text-sm hover:underline decoration-solid'><Link to='/privacy'>Privacy</Link></li>
                         <li className='mx-2 text-sm hover:underline decoration-solid'><Link to='/contact'>Contact</Link></li>
+                        <li className='mx-2 text-sm hover:underline decoration-solid cursor-pointer' onClick={()=>{setOpen(true)}}>Setting</li>
                     </ul>
                 </div>
             </footer>
+
+            <div className={`overflow-scroll max-h-full absolute top-0 right-0 ${open?'w-650':'hidden'} bg-white shadow-lg shadow-black rounded-lg`}>
+                <Setting setOpen={setOpen} setLanguage={setLanguage} languages={languages} language={language}/>
+            </div>
         </div>
     )
 }
