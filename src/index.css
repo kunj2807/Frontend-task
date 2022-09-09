@@ -72,36 +72,15 @@ input:checked+.slider:before {
 
 .open {
   width: 650px;
-  animation-name: slide;
-  animation-duration: 0.5s;
+  transition: .4s;
 }
 .close{
   width:0px;
-  animation-name: slide2;
-  animation-duration: 0.5s;
-}
-
-
-@keyframes slide{
-  from{width:0px;}
-  to{width:650px;}
-}
-@keyframes slide2{
-  from{width:650px;}
-  to{width:0px;}
+  transition: .4s;
 }
 
 @media (max-width:750px){
   .open{
     width: 100%;
   }
-  @keyframes slide{
-    from{width:0px;}
-    to{width:100%;}
-  }
-  @keyframes slide2{
-    from{width:100%;}
-    to{width:0px;}
-  }
-
 }
