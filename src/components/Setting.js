@@ -1,7 +1,7 @@
 import React, { useEffect,useRef } from 'react'
 
 
-function Setting({setOpen,setLanguage,languages,language}) {
+function Setting({setOpen,setLanguage,languages}) {
     const ref=useRef()
     const handleChange=(e)=>{
         const value=e.target.value

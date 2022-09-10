@@ -107,8 +107,8 @@ function Home({ languages }) {
                 </div>
             </footer>
 
-            <div className={`overflow-scroll max-h-full absolute top-0 right-0 ${open?'w-full open':'close'} bg-white shadow-lg shadow-black rounded-lg`}>
-                <Setting setOpen={setOpen} setLanguage={setLanguage} languages={languages} language={language}/>
+            <div className={`overflow-scroll md:max-h-full absolute top-0 right-0 ${open?'w-full open':'close'} bg-white shadow-lg shadow-black rounded-lg`}>
+                <Setting setOpen={setOpen} setLanguage={setLanguage} languages={languages}/>
             </div>
         </div>
     )
