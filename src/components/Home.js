@@ -41,7 +41,7 @@ function Home({ languages }) {
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/news.abff090e.svg" alt="" />
                         <p className='text-center'>{news}</p>
                     </div>
-                    <div className="bo mx-2x w-20">
+                    <div className="box mx-2x w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/shopping.ab2f9e3e.svg" alt="" />
                         <p className='text-center'>{shopping}</p>
                     </div>
