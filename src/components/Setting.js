@@ -14,22 +14,22 @@ function Setting({setOpen,setLanguage,languages}) {
     }
 
     return (
-        <div className='mx-2 md:mx-12 bg-white'>
-            <div className="head flex mt-5 ">
+        <div className='bg-white'>
+            <div className="head flex py-3 border-b-2 border-gray sticky top-0 bg-white ">
                 <div className='bg-gray-300 inline-block rounded-md h-10 w-10 flex justify-center ml-5  p-2'>
                     <i className="fa-solid fa-xmark text-xl cursor-pointer" ref={ref} onClick={()=>{setOpen(false)}}></i>
                 </div>
                 <button className='font-bold text-white py-2 px-4 border-blue-700 ml-5 rounded bg-blue-500 h-10 w-28 '>Setting</button>
-                <div className='border-r-2 border-gray ml-5 '></div>
+                <div className='border-r-2 border-gray ml-5'></div>
                 <div className='ml-5 my-auto '>
                     <p>Search History</p>
                 </div>
             </div>
-            <div className='border-2 bg-gray-50 border-gray rounded-md flex justify-between h-16 mt-5'>
+            <div className='border-2 mx-2 md:mx-12 bg-gray-50 border-gray rounded-md flex justify-between h-16 mt-5'>
                 <h1 className='font-bold text-xl my-auto mx-2 '>Setting</h1>
                 <button className='font-bold text-white py-2 px-4 border-blue-700 my-auto  ml-5 rounded-lg bg-blue-500 h-10 w-40 mr-3'>Reset all Setting</button>
             </div>
-            <div className='border-2 border-gray rounded-md mt-5 '>
+            <div className='border-2 border-gray mx-2 md:mx-12 rounded-md mt-5 '>
                 <div className='border-b-2 border-gray flex bg-gray-50 h-16 '>
                     <h1 className='font-bold text-xl my-auto mx-2'>Interface</h1>
                 </div>
@@ -59,7 +59,7 @@ function Setting({setOpen,setLanguage,languages}) {
                     </div>
                 </div>
             </div>
-            <div className='border-2 border-gray rounded-md mt-5 '>
+            <div className='border-2 mx-2 md:mx-12 border-gray rounded-md mt-5 '>
                 <div className='border-b-2 border-gray flex bg-gray-50 h-16 '>
                     <h1 className='font-bold text-xl my-auto mx-2'>Search Result</h1>
                 </div>
@@ -125,7 +125,7 @@ function Setting({setOpen,setLanguage,languages}) {
                     </div>
                 </div>
             </div>
-            <div className='border-2 border-gray rounded-md mt-5 '>
+            <div className='border-2 border-gray mx-2 md:mx-12 rounded-md mt-5 '>
                 <div className='border-b-2 border-gray flex bg-gray-50 h-16 '>
                     <h1 className='font-bold text-xl my-auto mx-2'>General</h1>
                 </div>
