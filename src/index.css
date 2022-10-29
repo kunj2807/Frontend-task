@@ -95,7 +95,7 @@ input:checked+.slider:before {
     z-index: 100;
   }
   .search:focus-within .searchbtn{
-    position: static;
+    display: none;
   }
   .search:focus-within .MuiSvgIcon-root1{
     display: block;

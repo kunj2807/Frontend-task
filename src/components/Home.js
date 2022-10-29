@@ -27,27 +27,26 @@ function Home({ languages }) {
                 <div className="boxes flex justify-center">
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/web.bc47ec9a.svg" alt="" />
-                        <p className='text-center font-bold'>{all}</p>
+                        <p className='text-center text-sm '>{all}</p>
                     </div>
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/images.622fbaa2.svg" alt="" />
-                        <p className='text-center font-bold'>{images}</p>
+                        <p className='text-center text-sm '>{images}</p>
                     </div>
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/videos.c9144333.svg" alt="" />
-                        <p className='text-center font-bold' >{video}</p>
+                        <p className='text-center text-sm ' >{video}</p>
                     </div>
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/news.abff090e.svg" alt="" />
-                        <p className='text-center font-bold'>{news}</p>
+                        <p className='text-center text-sm '>{news}</p>
                     </div>
                     <div className="box mx-2x w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/shopping.ab2f9e3e.svg" alt="" />
-                        <p className='text-center font-bold'>{shopping}</p>
+                        <p className='text-center text-sm '>{shopping}</p>
                     </div>
                 </div>
                 <div className="back">
-
                     <div className="search border-2 mt-5 md:mx-auto flex justify-around border-gray hover:shadow-md shadow-black rounded-xl w-full md:w-650 relative bg-white">
                         <svg class="MuiSvgIcon-root1" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg>
                         <div className='p-3 w-5/6 relative md:static left-8 inpdiv '>
@@ -61,7 +60,7 @@ function Home({ languages }) {
                         </button>
                     </div>
                 </div>
-                <div className='flex mt-5 lg:flex-row flex-col justify-center language-container'>
+                <div className='flex mt-5 lg:flex-row flex-col justify-center language-container '>
                     <div className='m-auto lg:m-0'>
                         <p>Languages:</p>
                     </div>
