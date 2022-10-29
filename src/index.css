@@ -69,19 +69,26 @@ input:checked+.slider:before {
 .round:before {
   border-radius: 50%;
 }
-
-.open {
-  width: 650px;
-  transition: .4s;
+.setting{
+  width: 600px;
+  position: absolute !important;
+  top: 0;
+  height: 100%;
+  right: -610px;
+  transition: .3s;
 }
-
-.close {
-  width: 0px;
-  transition: .4s;
+.open {
+  transform: translateX(-610px);
+  transition: .3s;
 }
 
 @media (max-width:750px) {
   .open {
+    width: 100%;
+  }
+}
+@media (max-width:750px) {
+  .setting {
     width: 100%;
   }
 }

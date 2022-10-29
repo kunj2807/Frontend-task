@@ -14,7 +14,7 @@ function Setting({setOpen,setLanguage,languages}) {
     }
 
     return (
-        <div className='bg-white'>
+        <div className='bg-white overflow-y-hidden'>
             <div className="head flex py-3 border-b-2 border-gray sticky top-0 bg-white ">
                 <div className='bg-gray-300 inline-block rounded-md h-10 w-10 flex justify-center ml-5  p-2'>
                     <i className="fa-solid fa-xmark text-xl cursor-pointer" ref={ref} onClick={()=>{setOpen(false)}}></i>
