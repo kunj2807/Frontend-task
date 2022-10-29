@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
-import {Link} from "react-router-dom"
+import React, { useState } from 'react'
+import { Link } from "react-router-dom"
 import Setting from './Setting';
 
 function Home({ languages }) {
     const [language, setLanguage] = useState(languages[0])
-    const [open,setOpen]=useState(false)
+    const [open, setOpen] = useState(false)
     const handleClick = (str) => {
         for (let index = 0; index < languages.length; index++) {
             if (languages[index].language === str) {
@@ -15,8 +15,8 @@ function Home({ languages }) {
     }
     const { all, video, images, news, shopping } = language
     return (
-        <div className='flex flex-col min-h-screen p-3' style={{"overflow":"hidden","position":"relative"}}>
-            <div className="header mx-auto visible lg:invisible ">
+        <div className='flex flex-col min-h-screen p-3' style={{ "overflow": "hidden", "position": "relative" }}>
+            <div className="header mx-auto visible lg:invisible">
                 <svg className="MuiSvgIcon-root w-5 h-5 inline fill-blue-500 " focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71s-.51-.2-.71 0l-1.48 1.48C13.85 1.23 12.95 1 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31C6.97 3.26 6 5.01 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"></path></svg>
                 <p className='inline text-blue-500 ml-2 font-bold'>Download App</p>
             </div>
@@ -27,35 +27,39 @@ function Home({ languages }) {
                 <div className="boxes flex justify-center">
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/web.bc47ec9a.svg" alt="" />
-                        <p className='text-center'>{all}</p>
+                        <p className='text-center font-bold'>{all}</p>
                     </div>
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/images.622fbaa2.svg" alt="" />
-                        <p className='text-center'>{images}</p>
+                        <p className='text-center font-bold'>{images}</p>
                     </div>
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/videos.c9144333.svg" alt="" />
-                        <p className='text-center' >{video}</p>
+                        <p className='text-center font-bold' >{video}</p>
                     </div>
                     <div className="box mx-2 w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/news.abff090e.svg" alt="" />
-                        <p className='text-center'>{news}</p>
+                        <p className='text-center font-bold'>{news}</p>
                     </div>
                     <div className="box mx-2x w-20">
                         <img className='w-8 h-8 m-auto ' src="https://qmamu.com/static/media/shopping.ab2f9e3e.svg" alt="" />
-                        <p className='text-center'>{shopping}</p>
+                        <p className='text-center font-bold'>{shopping}</p>
                     </div>
                 </div>
-                <div className="search border-2 mt-5 md:mx-auto flex justify-around border-gray hover:shadow-md shadow-black rounded-xl w-full md:w-650">
-                    <div className='p-3 w-5/6 '>
-                        <input className='w-full text-xl focus:outline-none' type="text" name="search" id="" placeholder='Search Qmamu' />
+                <div className="back">
+
+                    <div className="search border-2 mt-5 md:mx-auto flex justify-around border-gray hover:shadow-md shadow-black rounded-xl w-full md:w-650 relative bg-white">
+                        <svg class="MuiSvgIcon-root1" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg>
+                        <div className='p-3 w-5/6 relative md:static left-8 inpdiv '>
+                            <input className='w-full text-xl focus:outline-none inp' type="text" name="search" id="" placeholder='Search Qmamu' />
+                        </div>
+                        <button>
+                            <img src="https://qmamu.com/static/media/voice.b7436dc4.svg" width={25} height={25} alt="" />
+                        </button>
+                        <button className=' searchbtn absolute top-3 left-4 md:static'>
+                            <img src="https://qmamu.com/static/media/search_button_blue.1102fac3.svg" width={25} height={25} alt="" />
+                        </button>
                     </div>
-                    <button>
-                        <img src="https://qmamu.com/static/media/voice.b7436dc4.svg" width={25} height={25} alt="" />
-                    </button>
-                    <button className='hidden md:block'>
-                        <img src="https://qmamu.com/static/media/search_button_blue.1102fac3.svg" width={25} height={25} alt="" />
-                    </button>
                 </div>
                 <div className='flex mt-5 lg:flex-row flex-col justify-center language-container'>
                     <div className='m-auto lg:m-0'>
@@ -102,13 +106,13 @@ function Home({ languages }) {
                         <li className='mx-2 text-sm hover:underline decoration-solid'><Link to='/about'>About</Link></li>
                         <li className='mx-2 text-sm hover:underline decoration-solid'><Link to='/privacy'>Privacy</Link></li>
                         <li className='mx-2 text-sm hover:underline decoration-solid'><Link to='/contact'>Contact</Link></li>
-                        <li className='mx-2 text-sm hover:underline decoration-solid cursor-pointer' onClick={()=>{ setOpen(true)}}>Setting</li>
+                        <li className='mx-2 text-sm hover:underline decoration-solid cursor-pointer' onClick={() => { setOpen(true) }}>Setting</li>
                     </ul>
                 </div>
             </footer>
 
-            <div className={`setting overflow-y-scroll  md:max-h-full ${open?'open':''} bg-white shadow-lg shadow-black rounded-lg`}>
-                <Setting setOpen={setOpen} setLanguage={setLanguage} languages={languages}/>
+            <div className={`setting overflow-y-scroll  md:max-h-full ${open ? 'open' : ''} bg-white shadow-lg shadow-black rounded-lg`}>
+                <Setting setOpen={setOpen} setLanguage={setLanguage} languages={languages} language={language} />
             </div>
         </div>
     )

@@ -74,24 +74,52 @@ input:checked+.slider:before {
   position: absolute !important;
   top: 0;
   height: 100%;
-  right: -610px;
-  transition: .3s;
+  right: -650px;
+  transition: transform .3s;
 }
 .open {
-  transform: translateX(-610px);
+  transform: translateX(-650px);
   transition: .3s;
 }
 
-@media (max-width:750px) {
+@media (max-width:600px) {
   .open {
     width: 100%;
   }
-}
-@media (max-width:750px) {
   .setting {
     width: 100%;
   }
+
+  .search:focus-within {
+    width: 95%;
+    z-index: 100;
+  }
+  .search:focus-within .searchbtn{
+    position: static;
+  }
+  .search:focus-within .MuiSvgIcon-root1{
+    display: block;
+    margin: 5px 0px 0px 3px;
+  }
+  .inpdiv:focus-within{
+    position: static;
+    width: 60%;
+  }
+  .back:focus-within{
+    width: 100%;
+    position: absolute;
+    top:0%;
+    height: 100%;
+    backdrop-filter: blur(30px);
+  }
 }
+.MuiSvgIcon-root1{
+  display: none;
+  height: 40px;
+  width: 40px;
+  fill: #0186ff;
+}
+
 
 
 .box:hover {

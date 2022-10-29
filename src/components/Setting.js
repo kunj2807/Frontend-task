@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
+import { useEffect } from 'react'
 
 
-function Setting({setOpen,setLanguage,languages}) {
+function Setting({setOpen,setLanguage,languages,language}) {
     const ref=useRef()
     const handleChange=(e)=>{
         const value=e.target.value
@@ -12,7 +13,6 @@ function Setting({setOpen,setLanguage,languages}) {
         }
         ref.current.click()
     }
-
     return (
         <div className='bg-white overflow-y-hidden'>
             <div className="head flex py-3 border-b-2 border-gray sticky top-0 bg-white ">
@@ -36,7 +36,7 @@ function Setting({setOpen,setLanguage,languages}) {
                 <div className="selector flex flex-col mt-5 p-2 ">
                     <div className='flex  justify-between '>
                         <span>Display Language</span>
-                        <select className='mr-3 p-1 border-2 border-gray rounded-md w-36' name="language" id="language" onChange={handleChange}>
+                        <select className='mr-3 p-1 border-2 border-gray rounded-md w-36' value={language.language} name="language" id="language" onChange={handleChange}>
                             <option value="English">English</option>
                             <option value="Hindi">Hindi</option>
                             <option value="Bengali">Bengali</option>
